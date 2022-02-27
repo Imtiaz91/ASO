@@ -1,0 +1,31 @@
+tbody fas {
+    padding-left: 7px;
+}
+
+#crop-avatar
+{
+  width: 200px;
+  height: 200px;
+  border: solid 1px gray;
+  -webkit-border-image: repeat;
+}
+@media print {
+#print-section {
+  margin: 40px;
+}
+.category-sp
+{
+  border: 2px solid rgb(51, 48, 48);
+  padding: 5px 0px 0px 5px;
+    width: 30px;
+    height: 30px;
+}
+}
+.cross-validation-error input {
+  border-left: 5px solid #a94442;
+}
+.disable-btn
+{
+  background: #d7bd6e !important
+
+}

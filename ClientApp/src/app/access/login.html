@@ -1,0 +1,77 @@
+﻿
+<!-- <div class="load-wrapper text-center"><span class="load"></span></div> -->
+<div class="login-page" style="background-image: url(assets/img/bg.jpg);
+background-repeat: no-repeat;
+background-size: cover;">
+  <!-- /.login-logo -->
+  <div class="card card-outline card-primary login-custombox">
+    <div class="card-login-header bg-danger-custom text-center">
+     
+        <!-- <img alt="User Self-Desk" class="brand-image img-circle elevation-3" src="/assets/adminlte/dist/img/cat_logo.png" style="opacity: .8"> -->
+
+          <p href="#" class="h4">ASGHIRA ORGANIZATION</p>
+        
+    </div>
+    <div class="card-body card-body-login">
+     
+      <!-- <p class="login-box-msg">Sign in to start your session</p> -->
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="input-group mb-3">
+          <input type="text" formControlName="username" placeholder="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+          <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+        </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" formControlName="password" placeholder="Password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+        </div>
+        </div>
+        <br/>
+        <div class="row content">
+          <div class="col-6">
+            <div class="icheck-primary">
+              <input type="checkbox" id="remember">
+              <label for="remember">
+                Remember Me
+              </label>
+            </div>
+          </div>
+  
+            <!-- /.col -->
+            <div class="col-6">
+              <button [disabled]="loading" class="btn btn-block bg-danger-custom btn-xl float-right">
+              
+                Login
+            </button>
+            </div>
+            <!-- /.col -->
+          </div>
+        
+         
+      </form>
+      
+      <!-- /.social-auth-links -->
+
+      <!-- <p class="mb-1">
+        <a href="forgot-password.html">I forgot my password</a>
+      </p>
+      <p class="mb-0">
+        <a href="register.html" class="text-center">Register a new membership</a>
+      </p> -->
+    </div>
+    <!-- /.card-body -->
+  </div>
+  <!-- /.card -->
+</div>

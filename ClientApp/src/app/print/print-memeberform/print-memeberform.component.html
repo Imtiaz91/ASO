@@ -1,0 +1,211 @@
+<div class="container-fluid"  *ngIf="member">
+    <div class="row no-gutters">
+      <div class="col">
+        <img alt="User Self-Desk" class="banner-image" src="/assets/img/ASO-Banner.jpg" style="width:100%; height:200px;">
+      </div>
+    </div>
+    <hr>
+    <div class="row no-gutters" >
+      
+  
+      <div class="col" >
+        <h2>MemberShip Category</h2>
+        <div class="address">
+          <div class="card-body">
+            <ul class="todo-list ui-sortable" data-widget="todo-list">
+              <li>
+                <!-- drag handle -->
+                <span class="handle ui-sortable-handle">
+              
+                 <div class="category-sp" >+A</div> 
+                </span>
+
+                <!-- todo text -->
+                <span class="text">All Are Elligible (Monthly Fee:300)</span>
+              </li>
+              <li>
+                <span class="handle ui-sortable-handle">
+                <div class="category-sp" >A</div> 
+              </span>
+                <span class="text">Make the theme responsive (Monthly Fee:300)</span>
+              </li>
+              <li>
+                <span class="handle ui-sortable-handle">
+                <div class="category-sp" >B</div> 
+                </span>
+                <span class="text">Let theme shine like a star (Monthly Fee:300)</span>
+              </li>
+              <li>
+                <span class="handle ui-sortable-handle">
+                <div class="category-sp" >C</div> 
+                </span>
+                <span class="text">Let theme shine like a star (Monthly Fee:300)</span>
+              </li>
+              <li>
+                <span class="handle ui-sortable-handle">
+                <div class="category-sp" >D</div> 
+              </span>
+                <span class="text">Check your messages and notifications (Monthly Fee:300)</span>
+              </li>
+              <li>
+                <span class="handle ui-sortable-handle">
+                <div class="category-sp" >E</div> 
+              </span>
+                <span class="text">Let theme shine like a star (Monthly Fee:300)</span>
+              
+              </li>
+            </ul>
+          </div>
+         </div>
+      </div>
+      <div class="col-4">
+        <div class="row">
+          <div class="col-12">
+        <img 
+        [src]="userImage"
+        alt="member.name"
+        style="width: 200px; height: 210px;float: right; border: solid; "  class="img-responsive avatar-view">
+      </div>
+      <div class="col-12">
+
+        <div class="m-4">MemberShip No: <span class="print-lbl">{{member.membership_no}}</span></div>
+        <div  class="m-4">Date:  <span class="print-lbl"> {{member.reg_date}}</span> </div>
+      </div>
+      </div>
+      </div>
+
+    </div>
+  <div _ngcontent-ng-cli-universal-c0="" class="col-lg-12 card-header-custom bg-danger-custom "><h4 _ngcontent-ng-cli-universal-c0="" class="m-1">Information</h4></div>
+    <div class="row items-group">
+      <div class="col-6 mt-4">
+        <div class="row">
+          <div class="col-2"> <span>Name:</span></div>
+          <div class="col-9"> <span class="print-lbl">{{member.name}}</span></div>
+       
+      </div>
+      </div>
+  
+      <div class="col-6 mt-4">
+        <div class="row">
+          <div class="col-3"> <span>Father Name:</span></div>
+          <div class="col-9"> <span class="print-lbl">{{member.father_name}}</span></div>
+       
+      </div>
+      </div>
+      <div class="col-6 mt-4">
+        <div class="row">
+          <div class="col-2"> <span>CNIC No:</span></div>
+          <div class="col-9"> <span class="print-lbl"> {{member.cnic_number}}</span></div>
+       
+      </div>
+      </div>
+      <div class="col-6 mt-4">
+        <div class="row">
+          <div class="col-3"> <span>Gender:</span></div>
+          <div class="col-9"> <span class="print-lbl">{{member.cnic_number}}</span></div>
+       
+      </div>
+      </div>
+      <div class="col-5 mt-4">
+        <div class="row">
+          <div class="col-5"> <span>Academic Qualification:</span></div>
+          <div class="col-6"> <span class="print-lbl">{{member.qualification}}</span></div>
+       
+      </div>
+      </div>
+      
+      <div class="col-3 mt-4">
+        <div class="row">
+          <div class="col-5"> <span>Year Of Passing:</span></div>
+          <div class="col-6"> <span class="print-lbl">{{member.yearof_passing}}</span></div>
+       
+      </div>
+      </div>
+      <div class="col-4 mt-4">
+        <div class="row">
+          <div class="col-3"> <span>Profession:</span></div>
+          <div class="col-9"> <span class="print-lbl">profession</span></div>
+       
+      </div>
+      </div>
+      <div class="col-6 mt-4">
+        <div class="row">
+          <div class="col-4"> <span>Employed/ Self Employed:</span></div>
+          <div class="col-8"> <span class="print-lbl"></span></div>
+       
+      </div>
+      </div>
+      <div class="col-6 mt-4">
+        <div class="row">
+          <div class="col-3"> <span>Designation:</span></div>
+          <div class="col-9"> <span class="print-lbl"></span></div>
+       
+      </div>
+      </div>
+      <div class="col-12 mt-4">
+        <div class="row">
+          <div class="col-2"> <span>Name Of Organization:</span></div>
+          <div class="col-10"> <span class="print-lbl"></span></div>
+       
+      </div>
+      </div>
+      <div class="col-12 mt-4">
+        <div class="row">
+          <div class="col-2"> <span>Residential Address:</span></div>
+          <div class="col-10"> <span class="print-lbl"></span></div>
+       
+      </div>
+      </div>
+      <div class="col-12 mt-4">
+        <div class="row">
+          <div class="col-2"> <span>Permanent Address:</span></div>
+          <div class="col-10"> <span class="print-lbl"></span></div>
+       
+      </div>
+      </div>
+      <div class="col-6 mt-4">
+        <div class="row">
+          <div class="col-3"> <span>Province:</span></div>
+          <div class="col-9"> <span class="print-lbl"></span></div>
+       
+      </div>
+      </div>
+    
+      <div class="col-6 mt-4">
+        <div class="row">
+          <div class="col-2"> <span>City:</span></div>
+          <div class="col-10"> <span class="print-lbl">89789789789</span></div>
+       
+      </div>
+      </div>
+      <div class="col-6 mt-4">
+        <div class="row">
+          <div class="col-2"> <span>Mohallah.:</span></div>
+          <div class="col-9"> <span class="print-lbl"></span></div>
+       
+      </div>
+      </div>
+      <div class="col-6 mt-4">
+        <div class="row">
+          <div class="col-4"> <span>MemberShip Category:</span></div>
+          <div class="col-8"> <span class="print-lbl"></span></div>
+       
+      </div>
+      </div>
+      <div class="col-6 mt-4">
+        <div class="row">
+          <div class="col-3"> <span>MemberShip Rs.:</span></div>
+          <div class="col-8"> <span class="print-lbl"></span></div>
+       
+      </div>
+      </div>
+      <div class="col-6 mt-4">
+        <div class="row">
+          <div class="col-3"> <span>In Word Rs.:</span></div>
+          <div class="col-9"> <span class="print-lbl"></span></div>
+       
+      </div>
+      </div>
+      <br/>
+      <br/>
+  </div>

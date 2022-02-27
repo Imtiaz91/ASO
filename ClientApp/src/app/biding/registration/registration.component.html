@@ -1,0 +1,289 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1>REGISTRATION</h1>
+      </div>
+      <div class="col-sm-6 text-right">
+
+        <a [routerLink]="['/members']"> <i class="fas fa-angle-double-left"></i> BACK</a>
+        <!-- <ol class="breadcrumb float-sm-right">
+              <i class="fas fa-angle-double-left"></i>
+              <li class="breadcrumb-item"><a href="#">Bid</a></li>
+              <li class="breadcrumb-item active">View RFQ</li>
+            
+            </ol> -->
+
+      </div>
+    </div>
+  </div><!-- /.container-fluid -->
+</section>
+<section>
+  <form id="rg-registrationform" [formGroup]="memeberForm" (ngSubmit)="onSubmit()">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+
+          <!-- Main content -->
+          <div class="invoice p-3 mb-3">
+            <!-- title row -->
+
+            <div class="row">
+              <div class="col-10">
+              </div>
+          
+              <!-- /.col -->
+            </div>
+            <hr />
+            <!-- info row -->
+            <div class="row invoice-info">
+              <div class="col-sm-5 invoice-col">
+
+                <div class="form-group row">
+                  <div class="col-3">
+                    <span class="danger">*</span><b>Name:</b>
+                  </div>
+
+                  <div class="col-8">
+                    <input class="form-control form-control-sm" formControlName="name" type="text" required>
+
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-3">
+                    <b>CNIC#:</b>
+                  </div>
+                  <div class="col-8"><input class="form-control form-control-sm" formControlName="cnic_number"
+                      type="text"></div>
+
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-3">
+                    <b>Acdamic Qualification:</b>
+                  </div>
+                  <div class="col-8"><input class="form-control form-control-sm" formControlName="acadmic_qualification"
+                      value="Matric" type="text"></div>
+
+                </div>
+                <div class="form-group row">
+                  <div class="col-3">
+                    <b>Employed/Self Employed:</b>
+                  </div>
+                  <div class="col-8"><input class="form-control form-control-sm" formControlName="employed_name"
+                      value="Matric" type="text"></div>
+
+                </div>
+                <div class="form-group row">
+                  <div class="col-3">
+                    <b>Permanent Address: </b>
+                  </div>
+                  <div class="col-8">
+                    <textarea id="w3review" class="form-control form-control-sm" formControlName="permanent_address"
+                      name="permanent_address" wrap="hard" rows="2" cols="50">
+
+                  </textarea>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-3">
+                    <b>Mohallah:</b>
+                  </div>
+                  <div class="col-8">
+                    <select class="form-control form-control-sm">
+                      <option *ngFor="let moh of mohallah" value={{moh.id}}>
+                        {{moh.name}}
+                      </option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-3">
+                    <b>MemberShip Category:</b>
+                  </div>
+                  <div class="col-8">
+                    <select class="form-control form-control-sm">
+                      <option *ngFor="let category of categories" value={{category.id}}>
+                        {{category.description}}
+                      </option>
+                    </select>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- /.col -->
+              <div class="col-sm-5 invoice-col">
+
+                <div class="form-group row">
+                  <div class="col-3">
+                    <b>Father Name: </b>
+                  </div>
+                  <div class="col-8"><input class="form-control form-control-sm" formControlName="father_name"
+                      value="Bristol Electronics" type="text"></div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-3">
+                    <b for="gender">Gender:</b>
+                  </div>
+                  <div class="col-8">
+
+                    <input id="male" type="radio" value="male" name="gender">
+                    <label for="male">Male</label>
+
+                    <input id="female" type="radio" class="" value="female" name="gender" formControlName="gender">
+                    <label for="female">Female</label>
+                  </div>
+                  <!-- <div *ngIf="f.gender.touched && f.gender.invalid" class="alert alert-danger">
+                    <div *ngIf="f.gender.errors.required">Name is required.</div>
+                  </div> -->
+                </div>
+                <div class="form-group row">
+                  <div class="col-3">
+                    <b>Phone #: </b>
+                  </div>
+                  <div class="col-8"><input class="form-control form-control-sm" formControlName="mobile_number"
+                      type="text">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-3">
+                    <b>Email: </b>
+                  </div>
+
+                  <div class="col-8"><input class="form-control form-control-sm" type="email" name="email_address"
+                      formControlName="email_address" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$">
+                    <!-- <control-messages [[label]="'Email'">
+                  </control-messages> -->
+                    <!-- <div class="col-8"><input class="form-control form-control-sm"  formControlName="email_address" type="text"> -->
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-3">
+                    <b>Name of Organization:</b>
+                  </div>
+                  <div class="col-8"><input class="form-control form-control-sm" formControlName="employed_name"
+                      name="employed_name" type="text"></div>
+
+                </div>
+                <div class="form-group row">
+                  <div class="col-3">
+                    <b>Residential Adress:</b>
+                  </div>
+                  <div class="col-8"> <textarea id="w3review" class="form-control form-control-sm"
+                      formContrlName="residential_address" name="residential_address" f wrap="hard" rows="2" cols="50">
+
+                    </textarea></div>
+
+                </div>
+                <div class="form-group row">
+                  <div class="col-3">
+                    <b>Province: </b>
+                  </div>
+                  <div class="col-3">
+                    <input class="form-control form-control-sm" formContrlName="province" name="province" value="85009"
+                      type="text">
+                  </div>
+                  <div class="col-2">
+                    <b>City: </b>
+                  </div>
+                  <div class="col-3"><input class="form-control form-control-sm" type="text">
+                  </div>
+                </div>
+              </div>
+              <div _ngcontent-ng-cli-universal-c0="" class="col-md-2 col-sm-2 right">
+                <div _ngcontent-ng-cli-universal-c0="" class="profile_img" style="float: right; margin: 7px; ">
+                  <div _ngcontent-ng-cli-universal-c0="" id="crop-avatar">
+                    <img width="100%" height="200px" [src]="imageUrl" class="img-responsive avatar-view">
+                  </div>
+                </div>
+                <label type="button" class="text-blue">
+
+                  <input type="file" name="photo" accept=".png, .jpg, .jpeg" #fileInput (change)="uploadFile($event)"
+                    formContrlName="photo" style="display:none">
+                  <i class="fas fa-cloud-upload-alt"></i> Upload Picture
+                </label>
+              </div>
+              <!-- /.col -->
+            </div>
+            <br />
+            <!-- /.row -->
+
+            <!-- Table row -->
+
+            <!-- this row will not appear when printing -->
+            <div class="row no-print">
+              <div class="col-8">
+              </div>
+              <div class="col-4">
+                <div class="row">
+                  <div class="col-6">
+
+                    <button class="btn-custom btn-block bg-gradient-secondary btn-xl float-right"
+                      (click)="printPage()">PRINT</button>
+                  </div>
+                  <div class="col-6">
+                    <button type="submit" [disabled]="!memeberForm.valid"
+                      ng-class="!memeberForm.valid ?  'disable-btn':'input-success'"
+                      class="btn-custom btn-block bg-gradient-warning btn-xl float-right"
+                      style="margin-right: 5px;">SUBMIT</button>
+                    <!-- <button class="btn-custom btn-block bg-gradient-warning btn-xl float-right" (click)="submitForm()"
+                      style="margin-right: 5px;">
+                      SUBMIT </button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+
+  </form>
+</section>
+<!-- <p>Form Value: {{ memeberForm.value | json }}</p> -->
+
+<p>Form Status: {{ memeberForm.status }}</p>
+<div class="modal fade" id="modal-default">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header-custom">
+        <h5 class="modal-title"><i class="fas fa-question-circle"></i>Ask Question</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <textarea class="form-control form-control-sm" cols="50" id="txt_question" name="w3review" rows="4" wrap="hard">
+        </textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-custom btn-primary right">Submit</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+
+  <!-- /.modal-dialog -->
+</div>
+<div class="alert alert-success alert-dismissible" *ngIf="dataSaved" style="
+   bottom: 0;
+    box-sizing: border-box;
+    left: 0;
+    position: fixed;
+    right: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 1000;
+    float: right;
+    position: sticky;
+    z-index: 9999;
+">
+<button type="button" class="close"  data-dismiss="alert" aria-hidden="true">×</button>
+<h5><i class="icon fas fa-check"></i> Alert!</h5>
+{{massage}}
+</div>

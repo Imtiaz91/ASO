@@ -1,0 +1,13 @@
+
+<div class="wrapper">
+  <app-topnav *ngIf="authLogin()"></app-topnav>
+  <app-asidenav *ngIf="authLogin()"></app-asidenav>
+  
+  <div class="{{authLogin() ? 'content-wrapper' : 'uncheckedClass'}}">
+
+    <router-outlet></router-outlet>
+
+  </div>
+  <app-footer *ngIf="authLogin()"></app-footer>
+</div>
+

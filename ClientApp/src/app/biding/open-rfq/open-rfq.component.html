@@ -1,0 +1,394 @@
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1>OPEN RFQs</h1>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="#">HOME</a></li>
+          <li class="breadcrumb-item active">RFQs</li>
+        </ol>
+      </div>
+    </div>
+  </div><!-- /.container-fluid -->
+</section>
+
+<section class="content">
+  <div class="container-fluid">
+    <div class="card card-default-custom direct-chat direct-chat-warning">
+      <div class="card-header-custom">
+        <h3 class="card-title-custom">Search RFQs</h3>
+
+        <div class="card-tools">
+          <button type="button" (click)="showfilterclick()" class="btn btn-tool" data-card-widget="collapse">
+            <i [ngClass]="filterdivshow == true ? 'fas fa-angle-double-up' : 'fas fa-angle-double-down'"></i>
+          </button>
+
+        </div>
+      </div>
+      <div class="card-footer" style="display: block; background-color: white;">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card card-primary-custom">
+              <div class="card-header-custom">
+                <h3 class="card-title-filter">Status</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                      class="fas fa-filter text-sm-custom"></i>
+                  </button>
+                </div>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body" style="display: none;">
+                <!-- Conversations are loaded here -->
+                <div class="direct-chat-messages" style="height: 100px;">
+                  <div class="form-group">
+                    <div class="custom-control custom-checkbox">
+                      <input class="custom-control-input" type="CheckBox" id="customRadio1" name="customRadio">
+                      <label for="customRadio1" class="custom-control-label">Active</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input class="custom-control-input" type="CheckBox" id="customRadio2" name="customRadio">
+                      <label for="customRadio2" class="custom-control-label">Open</label>
+                    </div>
+                  
+                  </div>
+
+                  <!-- /.contatcts-list -->
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm float-right">Apply</button>
+                <br>
+                <!-- /.direct-chat-pane -->
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3" style="Display:none">
+            <div class="card card-primary-custom">
+              <div class="card-header-custom">
+                <h3 class="card-title-custom">Requested On</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                      class="fas fa-filter text-sm-custom"></i>
+                  </button>
+                </div>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body" style="display: none;">
+                <!-- Conversations are loaded here -->
+                <div class="direct-chat-messages" style="height: 100px;">
+                  <div class="input-group">
+                    <input type="date" name="message" placeholder="" class="form-control form-control-sm">
+                    <span class="input-group-append">
+
+                    </span>
+                  </div>
+
+                  <!-- /.contatcts-list -->
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm float-right">Apply</button>
+                <br>
+                <!-- /.direct-chat-pane -->
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+
+        </div>
+        <!-- /.card-footer-->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <table id="example2" class="custom-table table-striped table-bordered table-sm row-border hover" datatable>
+              <thead>
+                <tr>
+                  <th class="text-center" style="width: 2%;">Sr.No</th>
+                  <th class="text-center" style="width: 10%;">RFQ ID</th>
+                  <th class="text-center" style="width: 40%;">Manufacturer Name</th>
+                  <th class="text-center" style="width: 10%;">Request On</th>
+                  <th class="text-center">Requested By</th>
+                  <th class="text-center">Status</th>
+                  <th class="text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td class="text-center">007629</td>
+                  <td class="text-left">
+                    SPM6530T-3R3M || CERAMIC CAPACITOR || Monsters ....
+                  </td>
+                  <td class="text-center">08/22/2021</td>
+                  <td class="text-center">X</td>
+                  <td class="text-center"> 
+                    <a class="btn-custom btn-app-custom">
+                    <span class="badge bg-danger-custom">New</span>
+                    <i class="far fa-envelope"></i>
+                  </a>
+                  <span class="fas fa-question-circle"></span>
+                  </td>
+                  <td class="text-center">
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-pencil-alt">
+                      </i></a>
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-eye">
+                      </i></a>
+
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">2</td>
+                  <td class="text-center">007613</td>
+                  <td class="text-left">
+                    SPM6530T-3R3M || CERAMIC CAPACITOR
+                  </td>
+                  <td class="text-center">08/22/2021</td>
+                  <td class="text-center">legacy</td>
+                  <td class="text-center">
+                   
+                    <a class="btn-custom btn-app-custom">
+                      <i class="fas fa-envelope-open-text"></i>
+                    </a>
+                  </td>
+                  <td class="text-center">
+
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-pencil-alt">
+                      </i></a>
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-eye">
+                      </i></a>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">3</td>
+                  <td class="text-center">007633</td>
+                  <td class="text-left">
+                    SPM6530T-3R3M.....
+                  </td>
+                  <td class="text-center">08/22/2021</td>
+                  <td class="text-center">legacy</td>
+                  <td class="text-center">
+                    <a class="btn-custom btn-app-custom">
+                      <i class="far fa-envelope"></i>
+                    </a>
+                  </td>
+                  <td class="text-center">
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-pencil-alt">
+                      </i></a>
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-eye">
+                      </i></a>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">4</td>
+                  <td class="text-center">007634</td>
+                  <td class="text-left">
+                    Samsung 32" 1080p 60Hz LED Smart HDTV || 26" Mongoose Dolomite Men....
+                  </td>
+                  <td class="text-center">08/22/2021</td>
+                  <td class="text-center">S.Jobes</td>
+                  <td class="text-center">
+                    <a class="btn-custom btn-app-custom">
+                      <span class="badge bg-danger-custom">New</span>
+                      <i class="far fa-envelope"></i>
+                    </a>
+                    <span class="fas fa-question-circle"></span>
+                    <!-- <i class="far fa-envelope"></i>
+                    <span class="float-center badge bg-danger">New</span> -->
+                  </td>
+                  <td class="text-center">
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-pencil-alt">
+                      </i></a>
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-eye">
+                      </i></a>
+
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">5</td>
+                  <td class="text-center">007635</td>
+                  <td class="text-left">
+                    Switch Snap Action N.O./N.C. SPDT Lever PC Pins 11A 250VAC 30VDC 186.42VA ..
+                  </td>
+                  <td class="text-center">08/22/2021</td>
+                  <td class="text-center">S.Jobes</td>
+                  <td class="text-center">
+                    <a class="btn-custom btn-app-custom">
+                    <span class="badge bg-danger-custom">New</span>
+                    <i class="far fa-envelope"></i>
+                  </a>
+                  <span class="fas fa-question-circle"></span>
+                </td>
+                  <td class="text-center">
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-pencil-alt">
+                      </i></a>
+
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-eye">
+                      </i></a>
+
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">6</td>
+                  <td class="text-center">007636</td>
+                  <td class="text-left">
+                    SWITCH SNAP ACTION SPDT 11A 250V
+                  </td>
+                  <td class="text-center">08/22/2021</td>
+                  <td class="text-center">S.Jobes</td>
+                  <td class="text-center">                  
+                    <a class="btn-custom btn-app-custom">
+                      <i class="fas fa-envelope-open-text"></i>
+                    </a>
+                  </td>
+                  <td class="text-center">
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-pencil-alt">
+                      </i></a>
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-eye">
+                      </i></a>
+
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">7</td>
+                  <td class="text-center">007637</td>
+                  <td class="text-left">
+                    OEM/CM QUOTES ONLY | NO BROKERS
+                  </td>
+                  <td class="text-center">08/22/2021</td>
+                  <td class="text-center">S.Jobes</td>
+                  <td class="text-center">
+                    <a class="btn-custom btn-app-custom">
+                      <span class="badge bg-danger-custom">New</span>
+                      <i class="far fa-envelope"></i>
+                    </a>
+                  </td>
+                  <td class="text-center">
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-pencil-alt">
+                      </i></a>
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-eye">
+                      </i></a>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">8</td>
+                  <td class="text-center">007631</td>
+                  <td class="text-left">
+                    IC SUPERVISOR 1 CHANNEL 8DIP || Corporation IC SUPERVISOR 1 CHANNEL 8DIP || CAP CER 0.1UF 16V ....
+                  </td>
+                  <td class="text-center">08/22/2021</td>
+                  <td class="text-center">S.Jobes</td>
+                  <td class="text-center">  <a class="btn-custom btn-app-custom">
+                    <i class="far fa-envelope"></i>
+                  </a></td>
+                  <td class="text-center">
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-pencil-alt">
+                      </i></a>
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-eye">
+                      </i></a>
+
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">9</td>
+                  <td class="text-center">007639</td>
+                  <td class="text-left">
+                    CAP CER 0.1UF 16V X7R 0603
+                  </td>
+                  <td class="text-center">12/22/2021</td>
+                  <td class="text-center">S.Jobes</td>
+                  <td class="text-center">
+                    <a class="btn-custom btn-app-custom">
+                      <i class="far fa-envelope"></i>
+                    </a>
+                    </td>
+                  <td class="text-center">
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-pencil-alt">
+                      </i></a>
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-eye">
+                      </i></a>
+
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">10</td>
+                  <td class="text-center">007640</td>
+                  <td class="text-left">
+                    CAP CER 0.1UF 16V X7R 0603
+                  </td>
+                  <td class="text-center">08/22/2021</td>
+                  <td class="text-center">S.Jobes</td>
+                  <td class="text-center">
+                    <a class="btn-custom btn-app-custom">
+                      <i class="fas fa-envelope-open-text"></i>
+                    </a>
+                    </td>
+                  <td class="text-center">
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-pencil-alt">
+                      </i></a>
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-eye">
+                      </i></a>
+
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">11</td>
+                  <td class="text-center">007641</td>
+                  <td class="text-left">
+                    IC SUPERVISOR 1 CHANNEL 8DIP || Corporation IC SUPERVISOR 1 CHANNEL 8DIP || CAP CER 0.1UF 16V ....
+                  </td>
+                  <td class="text-center">08/22/2021</td>
+                  <td class="text-center">S.Jobes</td>
+                  <td class="text-center">
+                    <a class="btn-custom btn-app-custom">
+                      <i class="far fa-envelope"></i>
+                    </a>
+                  </td>
+                  <td class="text-center">
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-pencil-alt">
+                      </i></a>
+                    <a [routerLink]="['/rfq']"> <i class="fas fa-eye">
+                      </i></a>
+
+
+                  </td>
+                </tr>
+
+
+            </table>
+          </div>
+          <!-- /.card-body -->
+          <!-- /.card -->
+
+
+
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</section>
